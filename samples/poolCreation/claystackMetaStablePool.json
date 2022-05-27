@@ -1,0 +1,39 @@
+{
+    /*
+    It is highly recommended that you make a copy of this file before running the script!
+    Once you run the script with a given file, these comments will disappear since to the
+    file will be saved with the poolId encoded in it. The pool generation script can handle
+    reading json files with comments in them, but it cannot recreate them.
+    */
+
+    // Network and Gas Settings
+    "network": "kovan",
+    "gasSpeed":"average", // this can be {slow, average, fast}
+    "gasPriceOverride":"", // setting this to any number will override the gasSpeed
+
+    // Pool Name & Token Symbol
+    "name": "wETH-TTA MetaStable Pool",
+    "symbol": "wETH-TTA",
+
+    // Pool Configuration
+    "poolType": "MetaStablePool",
+    "swapFeePercent": "1.0",
+    "fromInternalBalance": false,
+    "oracleEnabled": true,
+    "amplificationParameter": "50",
+    "owner": "0xa502fe709f4DAB7455433DA9a8b501e45233D1c5",
+    "tokens": {
+        "0xdFCeA9088c8A88A76FF74892C1457C17dfeef9C1": {
+            "initialBalance": "100",
+            "allowance": -1,
+            "rateProvider": "0x0000000000000000000000000000000000000000",
+            "priceRateCacheDuration": "10"
+        },
+        "0x34bbEd5C9E5194D394bbCd6F8d2d92583eb26C9E": {
+            "initialBalance": "100",
+            "allowance": -1,
+            "rateProvider": "0x2836e2138b3E43B1cA9630F9F2C17969d21b4708",
+            "priceRateCacheDuration": "10"
+        }
+    }
+}
