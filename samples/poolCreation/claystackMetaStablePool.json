@@ -1,0 +1,39 @@
+{
+    /*
+    It is highly recommended that you make a copy of this file before running the script!
+    Once you run the script with a given file, these comments will disappear since to the
+    file will be saved with the poolId encoded in it. The pool generation script can handle
+    reading json files with comments in them, but it cannot recreate them.
+    */
+
+    // Network and Gas Settings
+    "network": "polygon",
+    "gasSpeed":"average", // this can be {slow, average, fast}
+    "gasPriceOverride":"", // setting this to any number will override the gasSpeed
+
+    // Pool Name & Token Symbol
+    "name": "Balancer csMatic Stable Pool",
+    "symbol": "B-csMATIC-STABLE",
+
+    // Pool Configuration
+    "poolType": "MetaStablePool",
+    "swapFeePercent": "<UPDATE-CS-FEE>",
+    "fromInternalBalance": false,
+    "oracleEnabled": true,
+    "amplificationParameter": "50",
+    "owner": "<CS-OWNER WALLET ADDRESS>",
+    "tokens": {
+        "0xdFCeA9088c8A88A76FF74892C1457C17dfeef9C1": {
+            "initialBalance": "10",
+            "allowance": -1,
+            "rateProvider": "0x0000000000000000000000000000000000000000",
+            "priceRateCacheDuration": "0"
+        },
+        "0x7ed6390f38d554B8518eF30B925b46972E768AF8": {
+            "initialBalance": "10",
+            "allowance": -1,
+            "rateProvider": "<CS-RATE-PROVIDER CONTRACT ADDRESS>",
+            "priceRateCacheDuration": "900"
+        }
+    }
+}
