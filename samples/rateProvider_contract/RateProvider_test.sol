@@ -2,23 +2,19 @@
 pragma solidity 0.8.11;
 
 import "./interfaces/IRateProvider.sol";
-import "./interfaces/IFxStateChildTunnel.sol";
 
 contract RateProvider_test is IRateProvider {
-    IFxStateChildTunnel public fxChild;
-
     uint256 reserveA;
     uint256 reserveB;
 
-    constructor(IFxStateChildTunnel _fxChild) {
-        fxChild = _fxChild;
+    constructor() {
+        reserveA = 1e18;
+        reserveA = 1e18;
     }
 
     function getRate() external override view returns (uint256) {
-        // (uint256 stMatic, uint256 matic) = fxChild.getReserves();
-
-        (uint256 stMatic, uint256 matic) = getReserves();
-        return matic * 1 ether / stMatic;
+        (uint256 csMatic, uint256 matic) = getReserves();
+        return matic * 1 ether / csMatic;
     }
 
     function getReserves() internal view returns(uint256, uint256){
