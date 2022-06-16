@@ -1,0 +1,25 @@
+{
+    "network": "kovan",
+    "gasSpeed": "average",
+    "gasPriceOverride": "",
+    "name": "Test LBP ATT",
+    "symbol": "LBP ATT",
+    "poolType": "LiquidityBootstrappingPool",
+    "swapFeePercent": "0.1",
+    "fromInternalBalance": true,
+    "swapEnabledOnStart": true,
+    "owner": "0xa502fe709f4DAB7455433DA9a8b501e45233D1c5",
+    "tokens": {
+        "0x34bbEd5C9E5194D394bbCd6F8d2d92583eb26C9E": {
+            "weight": "0.9",
+            "initialBalance": "0.000001",
+            "allowance": -1
+        },
+        "0xdFCeA9088c8A88A76FF74892C1457C17dfeef9C1": {
+            "weight": "0.1",
+            "initialBalance": "0.000001",
+            "allowance": -1
+        }
+    },
+    "poolId": "ddd27f868728995f81d1bd94b801c65d6785c74d00020000000000000000095d"
+}
